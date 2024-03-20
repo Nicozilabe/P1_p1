@@ -8,6 +8,7 @@ function inicio() {
   document.querySelector("#ej5Btn").addEventListener("click", ej5);
   document.querySelector("#ej6Btn").addEventListener("click", ej6);
   document.querySelector("#ej7Btn").addEventListener("click", ej7);
+  document.querySelector("#ej8Btn").addEventListener("click", ej8);
  // alert("hola");
 }
 function ej1() {
@@ -61,4 +62,12 @@ function ej7(){
   valor2= parseInt(document.querySelector("#valor2Ej7").value);
   resultadoEj7=valor1%valor2;
   document.querySelector("#resultadoEj7").innerHTML=resultadoEj7
+}
+function ej8(){
+  let valor1, valor2, resultadoEj3, valor3;
+  valor1= parseFloat(document.querySelector("#valor1Ej8").value);
+  valor2= parseFloat(document.querySelector("#valor2Ej8").value);
+  valor3= parseFloat(document.querySelector("#valor3Ej8").value);
+  resultadoEj8=((valor1+valor2)/valor3);
+  document.querySelector("#resultadoEj8").innerHTML=resultadoEj8
 }
