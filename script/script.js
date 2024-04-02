@@ -16,6 +16,8 @@ function inicio() {
   document.querySelector("#ej13Btn").addEventListener("click", ej13);
   document.querySelector("#ej14Btn").addEventListener("click", ej14);
   document.querySelector("#ej15Btn").addEventListener("click", ej15);
+  document.querySelector("#ej16Btn").addEventListener("click", ej16);
+  document.querySelector("#ej17Btn").addEventListener("click", ej17);
 }
 function ej1() {
   let nombreEj1, apellidoEj1, resultadoEj1;
@@ -123,4 +125,22 @@ function ej15() {
   contadorEj15 += valor;
   resultadoEj15 = `llevas ${contadorEj15} clicks`;
   document.querySelector("#resultadoEj15").innerHTML = resultadoEj15;
+}
+function ej16() {
+  let valor1, valor2, resultadoEj16, res;
+  valor1 = parseFloat(document.querySelector("#valor1Ej16").value);
+  valor2 = parseFloat(document.querySelector("#valor2Ej16").value);
+  res = ((valor1*3)+valor2);
+  resultadoEj16 = `Tienen ${res} puntos`;
+  document.querySelector("#resultadoEj16").innerHTML = resultadoEj16;
+}
+function ej17() {
+  let valor1, far,cel, resultadoEj17;
+  valor1 = parseFloat(document.querySelector("#valor1Ej17").value);
+  far = ((50+((valor1-40)/4)).toFixed(1));
+  cel = ((10+((valor1-40)/7)).toFixed(1));
+  /* comprobar fidelidad cálculo */
+  console.log(((far-32)/1.8).toFixed(1));
+  resultadoEj17 = `Hacen ${far} grados Fahrenheit y ${cel} grados Celcius`;
+  document.querySelector("#resultadoEj17").innerHTML = resultadoEj17;
 }
