@@ -9,7 +9,10 @@ function inicio() {
   document.querySelector("#ej6Btn").addEventListener("click", ej6);
   document.querySelector("#ej7Btn").addEventListener("click", ej7);
   document.querySelector("#ej8Btn").addEventListener("click", ej8);
- // alert("hola");
+  document.querySelector("#ej9Btn").addEventListener("click", ej9);
+  document.querySelector("#ej10Btn").addEventListener("click", ej10);
+  document.querySelector("#ej11Btn").addEventListener("click", ej11);
+  document.querySelector("#ej12Btn").addEventListener("click", ej12);
 }
 function ej1() {
   let nombreEj1, apellidoEj1, resultadoEj1;
@@ -64,10 +67,38 @@ function ej7(){
   document.querySelector("#resultadoEj7").innerHTML=resultadoEj7
 }
 function ej8(){
-  let valor1, valor2, resultadoEj3, valor3;
+  let valor1, valor2, resultadoEj8, valor3;
   valor1= parseFloat(document.querySelector("#valor1Ej8").value);
   valor2= parseFloat(document.querySelector("#valor2Ej8").value);
   valor3= parseFloat(document.querySelector("#valor3Ej8").value);
   resultadoEj8=((valor1+valor2)/valor3);
   document.querySelector("#resultadoEj8").innerHTML=resultadoEj8
+}
+function ej9(){
+  let valor1, valor2, resultadoEj9, valor3;
+  valor1= parseFloat(document.querySelector("#valor1Ej9").value);
+  valor2= parseFloat(document.querySelector("#valor2Ej9").value);
+  valor3= parseFloat(document.querySelector("#valor3Ej9").value);
+  resultadoEj9=((Math.pow(valor1,2))-(valor2+valor3));
+  document.querySelector("#resultadoEj9").innerHTML=resultadoEj9
+}
+function ej10(){
+  let valor1, valor2, resultadoEj10;
+  valor1= parseFloat(document.querySelector("#valor1Ej10").value);
+  valor2= parseFloat(document.querySelector("#valor2Ej10").value);
+  resultadoEj10=(valor1+((valor2*valor1)/100));
+  document.querySelector("#resultadoEj10").innerHTML=resultadoEj10
+}
+function ej11(){
+  let valor1, valor2, resultadoEj11;
+  valor1= parseFloat(document.querySelector("#valor1Ej11").value);
+  resultadoEj11=(valor1+((22*valor1)/100)).toFixed(2);
+  document.querySelector("#resultadoEj11").innerHTML=resultadoEj11
+}
+function ej12(){
+  let valor1, valor2, resultadoEj12;
+  valor1= parseFloat(document.querySelector("#valor1Ej12").value);
+  valor2= (parseFloat(document.querySelector("#valor2Ej12").value))/100;
+  resultadoEj12=((valor1/(Math.pow(valor2, 2))).toFixed(2));
+  document.querySelector("#resultadoEj12").innerHTML=resultadoEj12
 }
